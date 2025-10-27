@@ -6,6 +6,7 @@ import CoresRandom from './components/CoresRandom';
 import ListaTarefas from './components/ListaTarefas';
 import JogoAdivinha from './components/JogoAdivinha';
 import Cronometro from './components/Cronometro';
+import MusicPlayer from './components/MusicPlayer';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <ListaTarefas />
       <JogoAdivinha />
       <Cronometro />
+      <MusicPlayer />
     </div>
   );
 }
