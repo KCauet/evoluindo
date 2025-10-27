@@ -1,15 +1,23 @@
 import styles from './Music.module.css'
-import { Play } from 'lucide-react'
+import { Play, Pause, SkipForward, SkipBack, Volume2, Dam } from 'lucide-react'
 
 function MusicPlayer() {
+
+    function play() {
+        alert('Dando play')
+    }
+
     return (
         <div className={styles.mainBox}>
             <div className={styles.subBox}>
                 <div className={styles.buttons}>
-                    <button>Anterior</button>
-                    <button>Play</button>
-                    <Play size={32}/>
-                    <button>Proxima</button>
+                    
+                    <SkipBack size={32}/>
+                    <Play size={32} onClick={play} style={{display: 'none'}}/>
+                    <Pause size={32}/>
+                    <SkipForward size={32}/>
+                    
+                    
                 </div>
             </div>
         </div>
