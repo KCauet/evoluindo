@@ -1,23 +1,22 @@
-import logo from './logo.svg';
 import './App.css';
+import Cont from './components/Cont';
+import Msg from './components/Msg';
+import GerarSenha from './components/GerarSenha';
+import CoresRandom from './components/CoresRandom';
+import ListaTarefas from './components/ListaTarefas';
+import JogoAdivinha from './components/JogoAdivinha';
+import Cronometro from './components/Cronometro';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Cont />
+      <Msg Lista={['Ola maninho :>', 'Pode não man', 'Ah lula ;/ meu presidente']}/>
+      <GerarSenha />
+      <CoresRandom />
+      <ListaTarefas />
+      <JogoAdivinha />
+      <Cronometro />
     </div>
   );
 }

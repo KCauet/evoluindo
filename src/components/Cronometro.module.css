@@ -1,0 +1,14 @@
+.mainBox {
+    display: flex;
+    justify-content: center;
+}
+
+.subBox {
+    display: flex;
+    flex-direction: column;
+    background-color: bisque;
+    padding: 20px;
+    border: 1px solid;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
