@@ -6,8 +6,6 @@ function MusicPlayer() {
 
     const audio = useRef()
     const [isPlaying, setPlaying] = useState(false)
-    const [display1, setDisplayPlay] = useState('block')
-    const [display2, setDisplayPause] = useState('none')
     const [volume, setVolume] = useState(1)
     const [volumeBackcup, setBackup] = useState(0)
 
@@ -15,13 +13,9 @@ function MusicPlayer() {
         if (isPlaying) {
             audio.current.pause()
             setPlaying(false)
-            setDisplayPlay('block')
-            setDisplayPause('none')
         } else {
             audio.current.play()
             setPlaying(true)
-            setDisplayPlay('none')
-            setDisplayPause('block')
         }
         
     }
@@ -61,8 +55,13 @@ function MusicPlayer() {
                     
                     <audio ref={audio} src="/musicas/Blue lock.mp3"></audio>
                     <SkipBack size={32}/>
-                    <Play size={32} onClick={playPause} display={display1}/>
-                    <Pause size={32} onClick={playPause} display={display2} />
+                    {isPlaying ? (
+                        <Pause size={32} onClick={playPause} />
+                    ) : (
+                        <Play size={32} onClick={playPause} />
+                    )}
+                    
+                    
                     <SkipForward size={32}/>
                     {volumeIcon()}
                     <div>
