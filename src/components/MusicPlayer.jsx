@@ -9,6 +9,7 @@ function MusicPlayer() {
     const [display1, setDisplayPlay] = useState('block')
     const [display2, setDisplayPause] = useState('none')
     const [volume, setVolume] = useState(1)
+    const [volumeBackcup, setBackup] = useState(0)
 
     function playPause() {
         if (isPlaying) {
@@ -28,11 +29,11 @@ function MusicPlayer() {
     function volumeIcon() {
 
         if (volume === 0) {
-            return <VolumeOff size={32}/>
+            return <VolumeOff size={32} onClick={mutarDesmutar}/>
         } else if (volume > 0 && volume < 0.35) {
-            return <Volume1 size={32}/>
+            return <Volume1 size={32} onClick={mutarDesmutar}/>
         } else {
-            return <Volume2 size={32}/>
+            return <Volume2 size={32} onClick={mutarDesmutar}/>
         }
     }
 
@@ -40,6 +41,17 @@ function MusicPlayer() {
         const novoVolume = event.target.value / 100
         setVolume(novoVolume)
         audio.current.volume = novoVolume
+    }
+
+    function mutarDesmutar() {
+        if (volume !== 0) {
+            setBackup(volume)
+            setVolume(0)
+            audio.current.volume = 0
+        } else {
+            setVolume(volumeBackcup)
+            audio.current.volume = volumeBackcup
+        }
     }
 
     return (
@@ -53,7 +65,7 @@ function MusicPlayer() {
                     <Pause size={32} onClick={playPause} display={display2} />
                     <SkipForward size={32}/>
                     {volumeIcon()}
-                    <div >
+                    <div>
                         <input type="range" onChange={ajeitarIcone}/>
                     </div>
                     
