@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import styles from './Music.module.css'
 import { Play, Pause, SkipForward, SkipBack, Volume2, Volume1, VolumeOff } from 'lucide-react'
 
@@ -8,6 +8,7 @@ function MusicPlayer() {
     const [isPlaying, setPlaying] = useState(false)
     const [volume, setVolume] = useState(1)
     const [volumeBackcup, setBackup] = useState(0)
+    const [tempoAtual, setTempoAtual] = useState(0)
 
     function playPause() {
         if (isPlaying) {
@@ -16,6 +17,7 @@ function MusicPlayer() {
         } else {
             audio.current.play()
             setPlaying(true)
+            setTempoAtual(audio.current.currentTime)
         }
         
     }
@@ -48,6 +50,17 @@ function MusicPlayer() {
         }
     }
 
+    useEffect(() => {
+        let intervalo = setInterval(() => {
+            if (audio.current.currentTime !== undefined) {
+                setTempoAtual(audio.current.currentTime)
+            }
+            
+            return () => {clearInterval(intervalo)}
+        }, 100)
+
+    }, [])
+
     return (
         <div className={styles.mainBox}>
             <div className={styles.subBox}>
@@ -55,19 +68,30 @@ function MusicPlayer() {
                     
                     <audio ref={audio} src="/musicas/Blue lock.mp3"></audio>
                     <SkipBack size={32}/>
+
                     {isPlaying ? (
                         <Pause size={32} onClick={playPause} />
                     ) : (
                         <Play size={32} onClick={playPause} />
                     )}
                     
-                    
                     <SkipForward size={32}/>
                     {volumeIcon()}
+
                     <div>
                         <input type="range" onChange={ajeitarIcone}/>
                     </div>
                     
+                </div>
+
+                <div className={styles.progressBar}>
+                    <input type="range" min='0' max={audio.current?.duration || 0} value={tempoAtual} onChange={event => {
+                        
+                        let progresso = event.target.value;
+                        audio.current.currentTime = progresso
+                        setTempoAtual(progresso)
+                        
+                    }}/>
                 </div>
             </div>
         </div>
