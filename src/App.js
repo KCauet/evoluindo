@@ -7,6 +7,7 @@ import ListaTarefas from './components/ListaTarefas';
 import JogoAdivinha from './components/JogoAdivinha';
 import Cronometro from './components/Cronometro';
 import MusicPlayer from './components/MusicPlayer';
+import MudarTema from './components/MudarTema';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
       <JogoAdivinha />
       <Cronometro />
       <MusicPlayer />
+      <MudarTema />
     </div>
   );
 }

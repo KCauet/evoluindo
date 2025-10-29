@@ -1,0 +1,38 @@
+.mainBox {
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.subBox {
+    border: 1px solid;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+}
+
+.underHeader {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+header {
+    background-color: darkcyan;
+    display: flex;
+    justify-content: end;
+    padding-right: 20px;
+}
+
+aside {
+    background-color: lightgrey;
+    width: 30%;
+    margin-left: 10px;
+    height: 140px;
+}
+
+main {
+    background-color: grey;
+    width: 65%;
+}
