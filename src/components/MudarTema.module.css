@@ -19,7 +19,6 @@
 }
 
 header {
-    background-color: darkcyan;
     display: flex;
     justify-content: end;
     padding-right: 20px;
