@@ -8,6 +8,7 @@ import JogoAdivinha from './components/JogoAdivinha';
 import Cronometro from './components/Cronometro';
 import MusicPlayer from './components/MusicPlayer';
 import MudarTema from './components/MudarTema';
+import ListaTodo from './components/ListaTo-do';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
       <Cronometro />
       <MusicPlayer />
       <MudarTema />
+      <ListaTodo />
     </div>
   );
 }
