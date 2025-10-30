@@ -9,6 +9,7 @@ import Cronometro from './components/Cronometro';
 import MusicPlayer from './components/MusicPlayer';
 import MudarTema from './components/MudarTema';
 import ListaTodo from './components/ListaTo-do';
+import MiniCalculadora from './components/MiniCalculadora';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
       <MusicPlayer />
       <MudarTema />
       <ListaTodo />
+      <MiniCalculadora />
     </div>
   );
 }
