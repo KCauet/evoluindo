@@ -1,8 +1,9 @@
 import styles from './NumerosCalc.module.css'
 
-function NumerosCalc({numero}) {
+function NumerosCalc({numero, funcao}) {
+
     return (
-        <div className={styles.mainBox}>
+        <div className={styles.mainBox} onClick={funcao}>
             
             <div className={styles.subBox}>
                 <h3>{numero}</h3>
