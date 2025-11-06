@@ -1,0 +1,23 @@
+.mainBox {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.subBox {
+    background-color: grey;
+    text-align: center;
+    padding: 10px;
+    width: 25%;
+}
+
+.colorBox {
+    background-color: aqua;
+    height: 60px;
+}
+
+.mainBox button {
+    padding: 5px;
+    border-radius: 20px;
+    background-color: darkgrey;
+}

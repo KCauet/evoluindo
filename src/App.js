@@ -10,6 +10,7 @@ import MusicPlayer from './components/MusicPlayer';
 import MudarTema from './components/MudarTema';
 import ListaTodo from './components/ListaTo-do';
 import MiniCalculadora from './components/MiniCalculadora';
+import GeradorCores from './components/GeradorCores';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
       <MudarTema />
       <ListaTodo />
       <MiniCalculadora />
+      <GeradorCores />
     </div>
   );
 }
