@@ -17,7 +17,11 @@ function GeradorCores() {
 
     function addSaved() {
         let color = `rgb(${listaCores[0]}, ${listaCores[1]}, ${listaCores[2]})`
-        setSavedColors([color, ...savedColors])
+        if (color !== savedColors[0]) {
+            setSavedColors([color, ...savedColors])
+        } else {
+            alert('Você já salvou essa cor!')
+        }
     }
 
     return (
@@ -29,14 +33,29 @@ function GeradorCores() {
                 }}>
                 </div>
                 <div>
-                    <h3>Código da cor: {listaCores}</h3>
+                    <h3>Código da cor: <br /> {`rgb(${listaCores[0]}, ${listaCores[1]}, ${listaCores[2]})`}</h3>
                     <button onClick={randomizar}>Mudar cor</button>
                     <button onClick={addSaved}>Salvar cor</button>
                 </div>
                 <div className={styles.savedColors}>
                     {savedColors.map((cor, ID) => (
-                        <div key={ID} style={{backgroundColor: cor}}>
+                        <div key={ID} style={{
+                            display: 'flex',
+                            justifyContent: 'center',
+                            alignItems: 'center',
+                            gap:'5.3px'
+                        }}>
 
+                            <div style={{
+                                backgroundColor: cor,
+                                height: '50px',
+                                width: '50px',
+                                border: '1px solid',
+                                marginTop: '20px'
+                            }}>
+
+                            </div>
+                            <p><strong>{cor}</strong></p>
                         </div>
                     ) ) }
                 </div>
