@@ -55,9 +55,19 @@ function GeradorCores() {
                             }}>
 
                             </div>
-                            <p><strong>{cor}</strong></p>
+                            <div>
+                                <p><strong>{cor}</strong></p>
+                                <button onClick={() => {
+                                    setSavedColors(savedColors.filter((_, i) => i !== ID))
+                                }}>Remover</button>
+                                <button onClick={() => {
+                                    navigator.clipboard.writeText(cor)
+                                    alert('Cor copiada para a área de transferência')
+                                }}>copiar</button>
+                            </div>
+                            
                         </div>
-                    ) ) }
+                    ))}
                 </div>
             </div>
         </div>
