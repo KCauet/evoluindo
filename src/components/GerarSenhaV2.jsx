@@ -63,9 +63,6 @@ function GerarSenhaV2() {
                         </div>
                     </section>
                     {password}
-                    <br />
-                    <br />
-                    <button>Copiar senha</button>
                     
                 </div>
             </div>
