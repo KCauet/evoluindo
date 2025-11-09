@@ -11,6 +11,7 @@ import MudarTema from './components/MudarTema';
 import ListaTodo from './components/ListaTo-do';
 import MiniCalculadora from './components/MiniCalculadora';
 import GeradorCores from './components/GeradorCores';
+import GerarSenhaV2 from './components/GerarSenhaV2';
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
       <ListaTodo />
       <MiniCalculadora />
       <GeradorCores />
+      <GerarSenhaV2 />
     </div>
   );
 }

@@ -1,0 +1,30 @@
+.mainBox {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.subBox {
+    background-color: darkgrey;
+    border-radius: 20px;
+    border: 2px solid antiquewhite;
+    padding: 10px;
+}
+
+.mainForm {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.mainForm div {
+    gap: 10px;
+}
+
+.mainBox button {
+    height: 35px;
+    width: 230px;
+    border-radius: 20px;
+    border: 2px solid lightgrey;
+}

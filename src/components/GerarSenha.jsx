@@ -2,7 +2,7 @@ import { useState } from "react"
 
 function GerarSenha() {
     
-    const caracteres = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+    const caracteres = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%¨&*()"
     
     const [senha, setSenha] = useState('')
     const [tam, setTam] = useState('')
