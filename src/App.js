@@ -12,6 +12,7 @@ import ListaTodo from './components/ListaTo-do';
 import MiniCalculadora from './components/MiniCalculadora';
 import GeradorCores from './components/GeradorCores';
 import GerarSenhaV2 from './components/GerarSenhaV2';
+import ConversorDeMoedas from './components/ConversorDeMoedas';
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
       <MiniCalculadora />
       <GeradorCores />
       <GerarSenhaV2 />
+      <ConversorDeMoedas />
     </div>
   );
 }
