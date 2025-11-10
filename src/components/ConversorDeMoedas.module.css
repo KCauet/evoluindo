@@ -1,0 +1,31 @@
+.mainBox {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.subBox {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    background-color: grey;
+    padding: 5px;
+    border-radius: 15px;
+}
+
+.mainPart {
+    display: flex;
+    gap: 10px;
+}
+
+.mainPart input {
+    width: 50%;
+}
+
+.listasEscolha {
+    background-color: lightgrey;
+}
+
+.divListas {
+    
+}
