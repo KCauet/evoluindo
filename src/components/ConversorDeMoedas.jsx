@@ -1,10 +1,12 @@
 import { useState } from 'react'
 import styles from './ConversorDeMoedas.module.css'
+import { ArrowRightLeft } from 'lucide-react'
 
 function ConversorDeMoedas() {
 
-    const [listaMoedas1, setDisplay1] = useState(true)
-    const [listaMoedas2, setDisplay2] = useState(false)
+    const [listaMoedas, setListaM] = useState(['BRL', 'USD'])
+    const [listaCont1, setCont1] = useState(0)
+    const [listaCont2, setCont2] = useState(0)
 
     return (
         <div className={styles.mainBox}>
@@ -15,42 +17,30 @@ function ConversorDeMoedas() {
 
                     
                     <button onClick={() => {
-                        if (listaMoedas1) {
-                            setDisplay1(false)
+                        
+                        if (listaCont1 < 1) {
+                            setCont1((cont) => cont + 1)
                         } else {
-                            setDisplay1(true)
+                            setCont1(0)
                         }
-                    }}>moeda1</button>
 
+
+                    }}>{listaMoedas[listaCont1]}</button>
                     
-                    
+                    <ArrowRightLeft size={32} />
+
                     <button onClick={() => {
-                        if (listaMoedas2) {
-                            setDisplay2(false)
+                        
+                        if (listaCont2 < 1) {
+                            setCont2((cont) => cont + 1)
                         } else {
-                            setDisplay2(true)
+                            setCont2(0)
                         }
-                    }}>moeda2</button>
 
-                    <section className={styles.divListas} style={{position: 'absolute', marginLeft: '200px'}}>
+                    }}>{listaMoedas[listaCont2]}</button>
 
-                        {listaMoedas1 ? (
-                            <div className={styles.listasEscolha}>
-                                <p>Teste</p>
-                            </div>
-                        ) : (
-                            <br />
-                        )}
 
-                        {listaMoedas2 ? (
-                            <div className={styles.listasEscolha}>
-                                <p>Teste</p>
-                            </div>
-                        ) : (
-                            <br />
-                        )}
-
-                    </section>
+                    
                 </section>
                 <p>Resultado: </p>
             </div>
