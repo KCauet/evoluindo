@@ -38,3 +38,16 @@
 .divListas {
     background-color: blanchedalmond;
 }
+
+.anim {
+    transition: transform 0.3s ease-in-out;
+}
+
+.anim:hover {
+    transform: scale(1.2) rotate(5deg);
+}
+
+.mainBox input:disabled {
+    background-color: white;
+    border: 0px;
+}

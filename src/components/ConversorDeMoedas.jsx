@@ -30,7 +30,7 @@ function ConversorDeMoedas() {
 
                     }}>{listaMoedas[listaCont1]}</button>
                     
-                    <ArrowRightLeft size={32} onClick={() => {
+                    <ArrowRightLeft className={styles.anim} size={32} onClick={() => {
 
                         if (listaCont1 === 0) {
                             setCont1(1)
@@ -55,6 +55,7 @@ function ConversorDeMoedas() {
                 </section>
 
                 <div>
+                    <p>Resultado:</p>
                     <input type="number" disabled={true}/>
                 </div>
                 
