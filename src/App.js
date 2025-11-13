@@ -1,18 +1,18 @@
 import './App.css';
-import Cont from './components/Cont';
+import Cont from './components/Cont/Cont';
 import Msg from './components/Msg';
 import GerarSenha from './components/GerarSenha';
 import CoresRandom from './components/CoresRandom';
 import ListaTarefas from './components/ListaTarefas';
-import JogoAdivinha from './components/JogoAdivinha';
-import Cronometro from './components/Cronometro';
-import MusicPlayer from './components/MusicPlayer';
-import MudarTema from './components/MudarTema';
-import ListaTodo from './components/ListaTo-do';
-import MiniCalculadora from './components/MiniCalculadora';
-import GeradorCores from './components/GeradorCores';
-import GerarSenhaV2 from './components/GerarSenhaV2';
-import ConversorDeMoedas from './components/ConversorDeMoedas';
+import JogoAdivinha from './components/JogoAdivinha/JogoAdivinha';
+import Cronometro from './components/Cronometro/Cronometro';
+import MusicPlayer from './components/MusicPlayer/MusicPlayer';
+import MudarTema from './components/MudarTema/MudarTema';
+import ListaTodo from './components/ListaTo-Do/ListaTo-do';
+import MiniCalculadora from './components/MiniCalculadora/MiniCalculadora';
+import GeradorCores from './components/GeradorCores/GeradorCores';
+import GerarSenhaV2 from './components/GerarSenhaV2/GerarSenhaV2';
+import ConversorDeMoedas from './components/ConversorDeMoedas/ConversorDeMoedas';
 
 function App() {
   return (
